@@ -1,0 +1,618 @@
+
+
+
+1) Kubernetes is a distributed cluster management system based around a master/slave architecture.
+a) True
+b) False
+
+2) What Kubernetes resources would you use to route traffic from outside the cluster to pods in the cluster.
+Select all valid answer.
+a) ClusterIP
+b) NodeIP
+c) NodePort
+d) Ingress
+e) Gateway
+
+3) What is the recommended approach to organise pop-to-pod communications in a cluster?
+a) Use a service of type ClusterIP
+b) Use a service of type NodePort
+c) Use a service of type LoadBalancer
+d) Use a service of type ingress
+
+4) What client tool could you use to interact with a Kubernetes cluster?
+a) kubeadm
+b) kubectl
+c) kube
+d) kubeconfig
+e) kubeadmin
+
+5) In what file format are kubernetes resources defined?
+a) yaml files
+b) json files
+c) xmal files
+d) csv files
+e) pdf files
+
+6) The AWS EKS control plane can be managed by the user.
+a) True
+b) False
+
+7) When you provisioned AWS EKS an ingress is automatically provisioned as part of the cluster
+a) True
+b) False
+
+8) What is the name of the Kubernetes agent that runs on the data plane nodes and which is responsible
+for maintaining contact with the master plane API server?
+a) kubelet
+b) kube-proxy
+c) Pod
+d) Deployment
+e) StatefulSet
+
+9) How could you supplied configuration data into a kubernetes cluster?
+a) Use configMap
+b) Use secrets
+c) Use StatefulSet
+d) Use Deployment
+e) Use ReplicaSet
+
+10) You are configuring a Deployment to connect to a volume that you which to mount to the deployment.
+Which of these would you reference in your pod/deployment manifest?
+a) Persistent Volume Claim
+b) Persistent Volume
+c) Storage Class
+d) Volume
+e) StatefulSet
+
+11) You are designing a cluster in AWS EKA in which it is you are required to apply the principle of separation of duties
+and least privilege. Which of these services would you be interested in? Select all correct answers.
+a) RBAC 
+b) IAM
+c) Secrets
+d) ConfigSets
+e) Deployment
+
+12) What Kubernetes resources is responsible to assigning pods to nodes?
+a) Controller
+b) Scheduler
+c) Deployment
+d) API Server
+e) etcd
+
+13) You are designing a cluster infrastructure that will receive traffic from outside the cluster using a cloud-based load balancer.
+What resources would you deploy in the cluster to ensure a load balancer is created?
+a) Load Balancer Controller
+b) Service Controller
+c) NodePort Controller
+d) API server
+e) etcd Controller
+
+14) You wish to deploy kubernetes resources from your Terraform code. Which of these would you implement? Select two.
+a) Define a kubectl provide to point to the cluster and use resources type kubectl-manifest to define the resource manifest.
+b) Define a manifest provider to point to the cluster and specify the resources in the provider
+c) Define a deployment provider and specify the resources in the provider
+d) Define a Kubernetes provider and specify the resources in the provider
+e) Define a Helm provider and specify the Helm chart for the resources
+
+15) You are charged with designing a cluster for hosting stateful applications. Which of these resources would interest you?
+a) ReplicaSet
+b) Deployment
+c) StatefulSet
+d) DaemonSet
+e) PersistentSet
+
+16) What Kubernetes resource run on all nodes in a cluster?
+a) ReplicaSet
+b) StatefulSet
+c) DaemonSet
+d) InitContainer
+e) Deployment
+
+17) Which of these is true?
+a) When you create a deployment declaratively Kubernetes builds an image, pushes it to an image registry and then deploys it to the cluster.
+b) A pod can only contain one container
+c) A pod can span multiple nodes
+d) A container can have more than one pod
+e) A pod can contain multiple containers
+
+18) What is the recommended way of deploying workloads in a Kubernetes cluster?
+a) Use ReplicatSet
+b) Use Deployment
+
+19) Which of the following is not a required field to create a Kubernetes resource?
+a) kind
+b) apiVersion
+c) container
+d) metadata
+
+20) What is the command to list all the available objects in your Kuberenetes cluster ?
+a) kubectl list api-resources
+b) kubectl get apis
+c) kubectl get api-resources
+d) kubectl api-resources
+
+21) AWS EKS control plane API server can expose both a public and a private IP endpoint. An organisation that is security conscious
+does not wish to expose the public endpoint and only connect via the private endpoint. Is this possible?
+a) NO - both endpoints must be exposed
+b) Yes - the public endpoint could be disable and the private endpoint made reachable through a private network
+c) Yes - the public endpoint could be disable and the private endpoint made reachable through a public network
+d) Yes - You only need to make the private endpoint reachable through the private network
+e) Yes - You only need to make the private endpoint reachable through the public network
+
+22) This volume type can be used to share contents within containers in a pod, but will not persist beyond the life of a pod.
+a) Local
+b) ConfigMap
+c) FlexVolume
+d) EmptyDir
+
+23) Which of the below are container runtimes?
+a) CRI-O
+b) Containerd
+c) DockerEngine
+d) All of the above
+
+24) Which of the following command is used to create kubernetes service?
+a) Kubectl run
+b) Kubectl deploy
+c) Kubectl expose
+d) None of the above
+
+25) Following k8s resources do not associate with any namespace.
+a) DaemonSets
+b) Nodes
+c) PersistentVolumes
+d) Both (B) and (C)
+
+26) Which of these best describes the difference between a container and an image?
+a) There is no difference
+b) An images has only read-only layers while a container has both read-only and read-write layers
+c) An images has only read-write layers while a container has only read-only layers
+d) An images and a container have only read-only layers
+e) Data stored on the read-only layers on the image is durable while data store in the container read-write layer is ephemeral
+
+27) Information on how to build a Docker image is written in a file named:
+A) dockerimage
+B) Jenkinsfile
+C) Dockerfile
+D) docker-compose
+
+28) Each command in the Dockerfile translate into a layer in the Docker image.
+a) True
+b) False
+
+29) What is the Docker build context?
+a) It is the location from which the Docker Engine will look for resources on the while building the image
+b) It is the location to which the image will be pushed
+c) It is the location from which the base image will be pull
+d) It is the lication in the image to which the local resources will be pushed
+e) It is the location in the image from which the Docker engine will pull resources
+
+30) Docker stores image layers in a local cache.
+a) True
+b) False
+
+31) Under what conditions does Docker pull images from a remote registry?
+a) Whenver you run a docker run command
+b) When it cannot find an up to date layer locally it pulls a layer from the registry
+c) Only when the date is current
+d) Never
+e) When the image in the registry has been updated.
+
+32) What technique can be used to reduce the size of a docker image
+a) Multi-stage builds
+b) Compact builds
+c) Optimised build
+d) Minimised build
+e) Virtualised build
+
+33) Which of these is not a core component of the docker ecosystem?
+a) docker client
+b) docker daemon (server)
+c) docker registry
+d) Dockerfile
+e) docker master
+
+34) Which of these describes how docker image builds works. Select two
+a) Docker stores images and their layers in a local cache and only retrieves images and layers from remote registries if 
+there is none in the cache or if it is out of date
+b) Docker creates images and layers at every build
+c) Docker build creates containers from the images in the local cache
+d) Docker build stores the images in the Dockerfile
+e) Docker build creates an image from the directives in the Dockerfile
+
+35) Which of these would a CICD pipeline that creates a docker image do at the end of the CI phase?
+a) It will deploy the images as container 
+b) It will push the images onto a registry
+c) It will pull the image from the registry
+d) It will deploy the image onto a container runtime such as Kubernetes
+e) It will run the docker exec command to log onto the image
+
+====================================================================================================================
+====================================================================================================================
+====================================================================================================================
+
+
+1) The AWS Access key and Secret Access Key are used to log onto the AWS Console
+True
+False
+
+2) AWS IAM service is a global resource
+True
+False
+
+3) You have created an EC2 instance in a VPC in a public subnet. Which of the following is required to SSH to the instance from outside
+the VPC/Subnet. Select all relevant answers.
+a) Public IP address
+b) Private IP address
+c) NAT server
+d) A load balancer
+e) A security group configured to allow traffic on port 22
+
+4) You have created an EC2 instance in a VPC in a private subnet. You want the instance to be able to connect to the internet to download 
+software updates. Which of the following must you configure to enable that?
+a) Create a NAT gateway in the private subnet and configure it to point to the internet.
+b) Create a NAT gateway in the public subnet and ensure it has an Elastic IP
+c) Create a load balancer in the public subnet and point a NAT gateway to the Load balancer
+d) Create an Elastic IP address and point it to the internet. Attach the Elastic IP to the instance.
+e) Create an Internet gateway and attach it to a NAT gateway.
+
+5) You are provisioning an EC2 instance and want to also install and configure an application during the provisioning of the instance.
+Which of these approaches could you use to accomplish this task?
+a) Write a bash script and specify it as part of the user data of the instance.
+b) Write a Terraform script and specify it as part of the user data of the instance
+c) Write a cloud-init directive and specify it as part of the user data of the instance
+d) Write an instance metadata script and specify it as part of the instance metadata of the instance
+
+6) The EC2 service always creates an Instance Metadata Service for every instance as part of EC2 instance provisioning.
+True
+False
+
+7) Which of the following statements are true?
+a) EC2 Instance Connect can connect to instance only with private IP address
+b) Using EC2 Instance Connect offers a method of connection which means one does not have to manage keys. The keys are managed by the service.
+c) When one creates an EC2 Instance, the private keys are created and uploaded onto the instance metadata service
+d) When one creates an EC2 Instance, the public keys are created and uploaded onto the instance metadata service
+e) AWS secret key and secret access key can be used to log onto EC2 instances.
+
+8) Which of these services could be used to build hybrid connectivity between an on-premise data centre and an AWS cloud network?
+a) Direct Connect
+b) VPN
+c) Load balancer
+d) Modem
+e) Internet gateway
+
+9) A Security Group is associated with Elastic Network Interface.
+True
+False
+
+10) Which of these statements are true about the AWSCLI? Select two.
+a) It is a piece of software which when configured correctly can be used to interact with the AWS API.
+b) It is a piece of software that required the Terraform provider to function correctly
+c) It is a piece of software that is responsible only for authenticating with the AWS API.
+d) It is a piece of software that enables applications running on your AWS account to communicate with your local machine
+e) AWS access key and secret access key are required to configure the AWSCLI
+
+11) Terraform can best be described as a declarative provisioning tool.
+True
+False
+
+12) Which of the following is true when you run the "terraform init" command?
+a) It creates the declared infrastructure in the target environment
+b) It resolves dependencies by downloading modules and providers and sets up the backend for the storage of the state
+c) It allows Terraform to validate the declared scripts
+d) It connects to the target infrastructure and downloads the provider
+e) It downloads Terraform and installs in on the local machine
+
+13) Which of these statements best describes the role of a Terraform provider?
+a) It installs Terraform on the target infrastructure
+b) It is responsible for installing Terraform on the local machine
+c) It enables connectivity to the API of the target infrastructure
+d) It enables connectivity to the CICD system
+e) It is not required for a proper Terraform configuration
+
+14) What is responsible for creating and actively managing the Terraform state?
+a) The Terraform software
+b) The DevOps engineer
+c) A Terraform module
+d) The Terraform backend bucket
+e) The target deployment infrastructure
+
+15) Which of these is not a file that Terraform would recognise?
+a) main.tf
+b) terraform.tfvars
+c) variables.tf
+d) outputs.tf
+e) backend.state
+
+16) What is the recommended approach to editing a Terraform state file
+a) Use vim to edit the state file
+b) Use Visual Studio Code to edit the state file
+c) Use nano to edit the state file
+d) Use the command "terraform edit" to edit the state file
+e) The state file should not be manually edited.
+
+17) In which Terraform resource are credentials for connecting to a target system configured?
+a) The credential resource
+b) The provider resource
+c) A data resource
+d) A provisioner resource
+e) The Terraform state
+
+18) In a typical infrastructure provisioning pipeline Terraform is best positioned as;
+a) A configuration management tool
+b) An Infrastructure as Code tool
+c) A security scanning tool
+d) A CICD orchestration tool
+e) An application build tool
+
+19) Which of the following are true about Terraform?
+a) In order to provision on a target environment a Terraform agent must be installed on the target environment.
+b) One can use publicly available providers to connect to a target system for which that provider has been implemented
+c) Terraform uses an imperative style of provisioning which necessitate explicit definition of how the resources are to be provisioned.
+d) Terraform provisioning mechanism consists of reconciling the declared state and the desired state.
+e) Terraform can operate perfectly well without a state 
+
+20) What is the recommended approach of changing an AWS resource that was created and managed by Terraform?
+a) Through the terraform file that owns the resource
+b) Through another Infrastructure as Code tool
+c) Through the AWS console and importing the new configuration into Terraform state
+d) Through the "terraform state change" command
+e) Through the Terraform console interface
+
+21) When building an infrastructure with "terraform apply" it is possible to read in data from the state of a previous Terraform state (backend).
+a) True
+b) False
+
+22) You want a Terraform state to contain some values which could be read in by another Terraform run. What would you do to ensure this?
+a) Have the values outputted using outputs definitions into the state file that will be read
+b) Have the values outputted using outputs definitions into the state file that will do the reading
+c) Have the values outputted using variables definitions into the state file that will be read
+d) have the values outputted using variables definitions into the state file that will do the reading
+e) Do nothing - the values are automatically available in the state
+
+23) You want the same main Terraform codebase to be used to create multiple environments (dev, test, uat and production) with each environment
+having its own independent variables and state bucket. Which of these best describes how would you organise this.
+a) Create a main Terraform codebase for each environment, each in a separate environment directory. Create an S3 bucket to hold the state for each environment.
+Run "terraform apply" in each environment directory.
+b) Create a single main Terraform codebase. Create a directory for each environment to hold the variables values for the environment. Create an S3 bucket to hold the state for each environment.
+Use partial configuration to initialise so that each environment has its own state bucket. Run "terraform apply" in the main root directory.
+c) Create a single main Terraform codebase. Create a directory for each environment to hold the variables values for the environment. Create a single S3 bucket to hold the state for all environments.
+Use partial configuration to initialise so that each environment has its own state in the bucket. Run "terraform apply" in the main root directory.
+d) Create a main Terraform codebase for each environment, each in a separate environment directory. Create a single S3 bucket.
+Run "terraform apply" in each environment directory.
+e) It is not possible to achieve.
+
+
+24) If you run Terraform without having explicitly configured a backend for the state, what is likely to happen?
+a) The Terraform command will fail
+b) Terraform will configure a backend in S3 and create a state in the bucket
+c) Terraform will create a local state in the working directory
+d) The Terraform command will succeed but no state will be created
+e) Terraform will generate the code to configure the backend and create the state locally
+
+25) At which layer of the OSI (TCP/IP) network model does the AWS Application Load balancer operate?
+1) layer 1
+2) Layer 3
+3) Layer 4
+4) Layer 5
+5) layer 7
+
+26) At which layer of the OSI (TCP/IP) network model does the AWS Network Load balancer operate?
+1) layer 1
+2) Layer 3
+3) Layer 4
+4) Layer 5
+5) layer 7
+
+
+27) You have a particularly challenging technical issue which you which to communicate with your colleagues so that you could 
+collective come up with a solution. Which of these is the best way to conceptualise the problem in order to facilitate the communication
+with your colleagues?
+a) Discuss it with your team over a social channel without a conceptual diagram
+b) Develop a conceptual diagram of the problem include the various solutions options, their pros and cons and share with your team
+c) Copy and paste a solution from the internet and send to your team for review.
+d) Just go ahead and develop the first solution that comes to mind and invite your team for a review.
+e) None of the above
+
+
+28) What command would you use to establish a remote connection to an instance in your VPC in the AWS cloud?
+1) SSH
+2) HTTPS
+3) IMCP
+4) HSS
+5) TCP
+
+29) Which of these is the correct IP address of the instance metadata service?
+1) 169.254.169.254
+2) 254.169.169.254
+3) 169.169.254.254
+4) 254.169.254.169
+
+30)How you would enable an application running on an EC2 instance in your VPC to connect to an S3 bucket without the 
+traffic leaving your VPC?
+1) Set up a VPN between your VPC and the S3 bucket
+2) Set up Direct Connect between your VPC and the S3 bucket
+3) Set up VPC endpoint on your VPC
+4) Set up a messaging link between your VPC and S3 service
+5) Do nothing - connection already exists between your vPC and S3
+
+31) How would you enable applications running on your EC2 instance to have permissions to call AWS API securely without using 
+long term credentials?
+1) Attach a role to the instance
+2) Attach a policy to the instance
+3) Attach a permission to the instance
+4) Attach an IAM user with the right permissions to the instance
+5) Attach an IAM group with the right permissions to the instance
+
+
+32) On which port does the SSH server daemon listen?
+1) 22
+2) 88
+3) 80
+4) 443
+5) 8080
+
+33) In which file in an EC2 instance are the public keys stored?
+1) authorised_keys
+2) ssk_keys
+3) public_keys
+4) private_keys
+5) keypairs_keys
+
+34) How would you pass a script to an EC2 instance to be executed at EC2 instance provisioning time?
+1) Use user data to pass the script
+2) Use SSH to pass the script
+3) Use HTTPS to pass the script
+4) Use instance profile to pass the script
+5) Use instance metadata service to pass the script
+
+35) What connects the AWS regions into a fully connected global network
+1) The AWS Global Backbone
+2) The VPN Backbone
+3) The Direct Connect 
+4) The VPC gateway connection
+5) The AWS connection gateway
+
+36) Which of these products could you use to create a custom AWS AMI?
+1) Hashicorp Packer
+2) Terraform
+3) Ansible
+4) AWS CloudFormation
+5) Visual Studio code
+
+
+37) Which of these commands can be used to create a directory in Linux
+a) mkdir
+b) makedir
+c) md
+d) cd
+e) ls
+
+38) which of these Linux commands can be used for string substitution?
+a) sub
+b) grep
+c) sed
+d) awk
+e) vim
+
+39) Which of these can be used for setting up a secure shell login onto a remote server?
+a) ssh
+b) set shell
+c) scp
+d) ftp
+e) smtp
+
+40) Which of these can be used to securely copy a file from a local machine to a remote server?
+a) ssh
+b) set shell
+c) scp
+d) ftp
+e) smtp
+
+41) Which of these commands will allow you to view the content of a file while paging through it?
+a) page
+b) cat
+c) less
+d) file
+e) grep
+
+42) Which of the following is true?
+a) A directory cannot contain another subdirectory
+b) A directory can only contain one subdirectory
+c) A directory can contain multiple subdirectories and multiple files
+d) A directory can contain only through the other directories in the path
+e) A directory can be created inside a file
+
+43) Which of these commands would make a file executable?
+a) exec +x
+b) chown -x
+c) chmod +x
+d) chroot +x
+e) chage +x
+
+44) Which of these commands would you use to set the permissions on a file or directory?
+a) exec +x
+b) chown -x
+c) chmod +x
+d) chroot +x
+e) chage +x
+
+45) You have installed an application on a Linux server and would want the application to restart on server restart.
+What would you do?
+
+a) Configure the application as a service
+b) Configure the application as a proxy
+c) Configure the application as a unit file
+d) Configure the application in a highly-available configuration
+e) Configure the application as an event-driven application and set up a restart trigger
+
+46) Which Linux capability would you use to schedule jobs on the server?
+a) cron
+b) scheduler
+c) planner
+d) systemd
+e) processd
+
+47) Which commands could be used to copy files and directories on Linux
+a) copy
+b) mkscp
+c) rsync
+d) ls -l
+e) home
+
+48) What is the main role of a Terraform provider?
+a) Provide connectivity to the target endpoint of the system you are provisioning to.
+b) Provide configuration of the target endpoint
+c) Enables Terraform to download dependencies
+d) Enables the Terraform state to be created
+e) Enables Terraform to be a multi-cloud IAC tool
+
+49) Any folder containing valid Terraform files can be considered a module.
+a) True
+b) False
+
+50) Which Terraform resource could you use to interrogate existing configuration?
+a) Provider
+b) Data resources
+c) Provisioner
+d) output
+e) input
+
+51) You are building a distributed system in which there will be a central system managing other system. What architecture pattern
+would you use? Select all correct answers
+a) A master-slave architecture with agents installed on the managed servers
+b) A master-slave architecture with agents installed on the master nodes
+c) Ensure the agents can initiate connection to the master nodes
+d) Ensure the master can initiate connection to the slave nodes
+e) Ensure the slaves nodes can communicate with each other
+
+52) In a master-slave architecture, the process by which the agent on the slave node maintains connectivity with the master is called.
+a) Culling
+b) Talking
+c) Polling
+d) Calling
+e) Pinging
+
+53) Which of these DevOps tools implements a master-slave architecture pattern
+a) Jenkins
+b) Ansible
+c) Puppet
+d) Chef
+e) Terraform
+
+54) You are architecting a solution that will require a number of frontend servers to serve requests at the front tier.
+The traffic profile is expected to be extremely variable with peak traffic occurring unpredictably in time. How would you 
+architect this with the least number of AWS services?
+a) Have an Application Load Balancer in front of the web tier servers 
+b) Have an Application Load Balancer in front of the web tier servers, plus have the web tier servers in an Auto Scaling Group with maximum capacity set to handle the max traffic
+c) Have the web tier servers publicly exposed to the internet and have the servers in an Auto Scaling Group with maximum capacity set to handle the max traffic
+d) Have an Auto Scaling Group set with Desired, Minimum and Maximum capacity set to the maximum traffic level
+
+55) Which of these happens when you run "terraform init"?
+a) Dependencies (providers and modules) are downloaded onto the local server
+b) Terraform connects to the target deployment system and downloads the dependencies
+c) Terraform creates the resources on the target deployment system
+d) Terraform deletes all previously created resources
+e) Terraform does nothing
+
+
